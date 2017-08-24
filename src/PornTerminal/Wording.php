@@ -43,7 +43,7 @@ class Wording
 	 * @return string
 	 */
 
-	public function get(string $key) : string
+	public function get(string $key = null) : string
 	{
 		return $this->_wordingArray[$key];
 	}

@@ -1,6 +1,8 @@
 <?php
 namespace PornTerminal\Tests;
 
+use PornTerminal\Wording;
+
 /**
  * WordingTest
  *
@@ -21,6 +23,17 @@ class WordingTest extends TestCaseAbstract
 
 	public function testDummy()
 	{
-		$this->assertEquals(1, 1);
+		/* setup */
+
+		$wording = new Wording();
+		$wording->init();
+
+		/* actual */
+
+		$actual = $wording->get('colon');
+
+		/* compare */
+
+		$this->assertString($actual);
 	}
 }
