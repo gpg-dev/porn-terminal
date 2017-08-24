@@ -1,12 +1,28 @@
 {
 	"name": "redaxmedia/porn-terminal",
 	"description": "Show random porn in your terminal",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"license": "GPL-3.0",
 	"require":
 	{
 		"lastguest/pixeler": "1.1.2",
 		"nategood/commando": "0.2.9",
-		"php": ">5.4"
-	}
+		"php": ">7.0"
+	},
+	"require-dev":
+	{
+		"johnkary/phpunit-speedtrap": "2.0.0-BETA1",
+		"phpunit/phpunit": "6.1.4"
+	},
+	"autoload":
+	{
+		"psr-0":
+		{
+			"PornTerminal": "src"
+		}
+	},
+	"bin":
+	[
+		"bin/porn-terminal"
+	]
 }

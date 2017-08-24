@@ -1,224 +1,75 @@
 #!/usr/bin/env php
 <?php
 
-error_reporting(E_ERROR | E_PARSE);
+namespace PornTerminal;
 
-/* autoload */
+use Commando;
 
-include dirname(__DIR__) . '/vendor/autoload.php';
+/* bootstrap */
 
-$providerArray =
-[
-	'porn.com' =>
-	[
-		'url' => 'https://api.porn.com',
-		'endpoint' =>
-		[
-			'actors' => '/actors/find.json',
-			'channels' => '/channels/find.json',
-			'dvds' => '/dvds/find.json',
-			'videos' => '/videos/find.json'
-		]
-	],
-	'pornhub.com' =>
-	[
-		'url' => 'https://pornhub.com',
-		'endpoint' =>
-		[
-			'videos' => '/webmasters/search'
-		]
-	],
-	'redtube.com' =>
-	[
-		'url' => 'https://api.redtube.com',
-		'endpoint' =>
-		[
-			'videos' => '?data=redtube.Videos.searchVideos&output=json'
-		]
-	],
-	'spankwire.com' =>
-	[
-		'url' => 'https://spankwire.com/api',
-		'endpoint' =>
-		[
-			'videos' => '/HubTrafficApiCall?data=searchVideos&output=json'
-		]
-	],
-	'youporn.com' =>
-	[
-		'url' => 'https://www.youporn.com/api',
-		'endpoint' =>
-		[
-			'videos' => '/webmasters/search'
-		]
-	]
-];
+include('src'  . DIRECTORY_SEPARATOR . 'PornTerminal' . DIRECTORY_SEPARATOR . 'bootstrap.php');
 
-/* set command */
+/* api */
+
+$api = new Api();
+$api->init();
+
+/* wording */
+
+$wording = new Wording();
+$wording->init();
+
+/* command */
 
 $command = new Commando\Command();
 $command
 	->option('p')
 	->aka('api-provider')
-	->describe('API provider. (porn.com, pornhub.com, redtube.com, spankwire.com, youporn.com)')
-	->default(array_rand($providerArray))
-	->must(function ($must)
-	{
-		$mustArray =
-		[
-			'porn.com',
-			'pornhub.com',
-			'redtube.com',
-			'spankwire.com',
-			'youporn.com'
-		];
-		return in_array($must, $mustArray);
-	})
+	->describe($wording->get('api_provider') . $wording->get('colon') . ' ' . $api->getProviderList())
+	->default($api->getProviderDefault())
+	->must($api->hasProvider())
 	->required()
 	->option('e')
 	->aka('api-endpoint')
-	->describe('API endpoint. (actors, channels, dvds, videos)')
-	->default('videos')
-	->must(function ($must)
-	{
-		$mustArray =
-		[
-			'actors',
-			'channels',
-			'dvds',
-			'videos'
-		];
-		return in_array($must, $mustArray);
-	})
+	->describe($wording->get('api_endpoint') . $wording->get('colon') . ' ' . $api->getEndpointList())
+	->default($api->getEndpointDefault())
+	->must($api->hasEndpoint($command))
 	->required()
 	->option('q')
 	->aka('api-query')
-	->describe('API query.')
+	->describe($wording->get('api_query') . $wording->get('point'))
 	->option('r')
 	->aka('image-resize')
-	->describe('Resize the image.')
+	->describe($wording->get('image_resize') . $wording->get('point'))
 	->default(0.5)
 	->option('i')
 	->aka('image-invert')
-	->describe('Invert the image.')
+	->describe($wording->get('image_invert') . $wording->get('point'))
 	->boolean()
 	->option('w')
 	->aka('image-weight')
-	->describe('Weight of the image.')
+	->describe($wording->get('image_weight') . $wording->get('point'))
 	->default(1)
 	->option('d')
 	->aka('image-dither')
-	->describe('Dither of the image.')
+	->describe($wording->get('image_dither') . $wording->get('point'))
 	->default(1)
 	->boolean()
 	->option('g')
 	->aka('image-grayscale')
-	->describe('Grayscale of the image.')
+	->describe($wording->get('image_grayscale') . $wording->get('point'))
 	->boolean()
 	->option('m')
+	->default(1)
 	->aka('image-metadata')
-	->describe('Metadata of the image.')
+	->describe($wording->get('image_metadata') . $wording->get('point'))
 	->boolean()
 	->option('o')
 	->aka('open-browser')
-	->describe('Open URL in browser.')
+	->describe($wording->get('open_browser') . $wording->get('point'))
 	->boolean();
 
-/* handle content */
+/* core */
 
-$provider = $providerArray[$command['p']];
-$endpoint = $provider['endpoint'][$command['e']];
-if (!$endpoint)
-{
-	exit('API endpoint not supported!' . PHP_EOL);
-}
-$url = $provider['url'] . $endpoint . $command['q'];
-$content = json_decode(file_get_contents($url));
-
-/* map content */
-
-if ($content->result)
-{
-	$content = $content->result;
-}
-if ($content->videos)
-{
-	$content = $content->videos;
-}
-if ($content->video)
-{
-	$content = $content->video;
-}
-
-/* handle result */
-
-$total = count($content);
-$result = $content{mt_rand(0, $total)};
-
-/* map result */
-
-if ($result->video)
-{
-	$result = $result->video;
-}
-
-/* handle image */
-
-if ($result)
-{
-	$image = Pixeler\Pixeler::image($result->thumb, $command['r'], $command['i'], $command['w'], $command['d']);
-	if ($command['g'])
-	{
-		$image->clearColors();
-	}
-	$output = $image;
-
-	/* handle metadata */
-
-	if ($command['m'])
-	{
-		if ($result->title)
-		{
-			$output .= 'Title: ' . $result->title . PHP_EOL;
-		}
-		if ($result->name)
-		{
-			$output .= 'Name: ' . $result->name . PHP_EOL;
-		}
-		if ($result->url)
-		{
-			$output .= 'URL: ' . $result->url . PHP_EOL;
-		}
-		if ($result->rating)
-		{
-			$output .= 'Rating: ' . $result->rating . PHP_EOL;
-		}
-		if ($result->views)
-		{
-			$output .= 'Views: ' . $result->views . PHP_EOL;
-		}
-		if ($result->duration)
-		{
-			$output .= 'Duration: ' . $result->duration . PHP_EOL;
-		}
-	}
-
-	/* open browser */
-
-	if ($result->url && $command['o'])
-	{
-		if (PHP_OS === 'Linux')
-		{
-			exec('xdg-open ' . $result->url);
-		}
-		else
-		{
-			exec('open ' . $result->url);
-		}
-	}
-	echo $output;
-}
-else
-{
-	exit('No result found!' . PHP_EOL);
-}
+$core = new Core($api, $wording);
+echo $core->run($command);
