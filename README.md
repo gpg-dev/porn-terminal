@@ -86,19 +86,19 @@ bin/porn-terminal -m
 Show videos with big tits:
 
 ```
-bin/porn-terminal -q ?tags=big-tits
+bin/porn-terminal -q tags=big-tits
 ```
 
 Show actors by rating:
 
 ```
-bin/porn-terminal -e actors -q ?order=rating
+bin/porn-terminal -e actors -q order=rating
 ```
 
 Show dvds by views:
 
 ```
-bin/porn-terminal -e dvds -q ?order=views
+bin/porn-terminal -e dvds -q order=views
 ```
 
 Show videos from pornhub.com:

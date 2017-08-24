@@ -159,7 +159,7 @@ class Core
 		{
 			$command->error(new Exception($this->_wording->get('no_endpoint')));
 		}
-		return $providerValue['url'] . $endpointValue . $queryValue;
+		return $providerValue['url'] . $endpointValue . '&' . $queryValue;
 	}
 
 	/**

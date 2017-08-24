@@ -18,9 +18,10 @@ install:
 - composer install
 
 script:
-- bin/porn-terminal -p porn.com -m
-- bin/porn-terminal -p pornhub.com -m
-- bin/porn-terminal -p redtube.com -m
-- bin/porn-terminal -p spankwire.com -m
-- bin/porn-terminal -p youporn.com -m
+- bin/porn-terminal -p porn.com
+- bin/porn-terminal -p pornhub.com
+- bin/porn-terminal -p redtube.com
+- bin/porn-terminal -p spankwire.com
+- bin/porn-terminal -p tube8.com
+- bin/porn-terminal -p youporn.com
 - vendor/bin/phpunit

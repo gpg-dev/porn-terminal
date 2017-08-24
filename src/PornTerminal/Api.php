@@ -144,8 +144,7 @@ class Api
 
 	public function getEndpointList() : string
 	{
-		$endpointArray = $this->getEndpointArray();
-		return implode(', ', $endpointArray);
+		return implode(', ', $this->getEndpointArray());
 	}
 
 	/**

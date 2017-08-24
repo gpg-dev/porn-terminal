@@ -36,7 +36,7 @@
 		{
 			"videos": "/HubTrafficApiCall?data=searchVideos&output=json"
 		},
-		"query": "&segment=straight"
+		"query": "segment=straight"
 	},
 	"tube8.com":
 	{
@@ -45,7 +45,7 @@
 		{
 			"videos": "?action=searchVideos&output=json"
 		},
-		"query": "&search=straight&orientation=straight"
+		"query": "search=straight&orientation=straight"
 	},
 	"youporn.com":
 	{
