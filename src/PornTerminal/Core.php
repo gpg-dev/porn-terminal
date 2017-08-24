@@ -65,7 +65,7 @@ class Core
 
 		/* collect output */
 
-		$output = $this->_drawImage($command, $result);
+		$output = (string)$this->_drawImage($command, $result);
 		if ($command['m'])
 		{
 			$metaArray = $this->_getMetadataArray($result);

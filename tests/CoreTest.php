@@ -1,9 +1,6 @@
 <?php
 namespace PornTerminal\Tests;
 
-use PornTerminal\Core;
-use PornTerminal\Tests\TestCaseAbstract;
-
 /**
  * CoreTest
  *
@@ -16,4 +13,14 @@ use PornTerminal\Tests\TestCaseAbstract;
 
 class CoreTest extends TestCaseAbstract
 {
+	/**
+	 * testDummy
+	 *
+	 * @since 2.0.0
+	 */
+
+	public function testDummy()
+	{
+		$this->assertEquals(1, 1);
+	}
 }

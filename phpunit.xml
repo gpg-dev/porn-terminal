@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<phpunit convertErrorsToExceptions="true" convertWarningsToExceptions="false" bootstrap="tests/bootstrap.php">
+<phpunit convertErrorsToExceptions="true" convertWarningsToExceptions="true" bootstrap="tests/bootstrap.php">
 
 	<!-- listeners -->
 
