@@ -46,9 +46,9 @@
 		],
 		"lint":
 		[
+			"vendor/bin/phpcs src tests",
 			"vendor/bin/phpcpd src tests",
-			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=7 src",
-			"vendor/bin/phpcs src tests"
+			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=7 --no-progress src"
 		]
 	},
 	"extra":

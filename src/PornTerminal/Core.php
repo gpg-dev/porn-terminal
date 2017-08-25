@@ -43,7 +43,7 @@ class Core
 	 * @param Wording $wording instance of the wording class
 	 */
 
-	public function __construct(Api $api = null, Wording $wording = null)
+	public function __construct(Api $api, Wording $wording)
 	{
 		$this->_api = $api;
 		$this->_wording = $wording;
@@ -59,7 +59,7 @@ class Core
 	 * @return string
 	 */
 
-	public function run(Commando\Command $command = null) : string
+	public function run(Commando\Command $command) : string
 	{
 		$result = $this->_getResult($command);
 
@@ -94,7 +94,7 @@ class Core
 	 * @return stdClass
 	 */
 
-	protected function _getResult(Commando\Command $command = null) : stdClass
+	protected function _getResult(Commando\Command $command) : stdClass
 	{
 		$url = $this->_buildUrl($command);
 		$content = file_get_contents($url);
@@ -147,7 +147,7 @@ class Core
 	 * @return string
 	 */
 
-	public function _buildUrl(Commando\Command $command = null) : string
+	public function _buildUrl(Commando\Command $command) : string
 	{
 		$providerKey = $command['p'];
 		$endpointKey = $command['e'];
@@ -173,7 +173,7 @@ class Core
 	 * @return Pixeler\Image
 	 */
 
-	protected function _drawImage(Commando\Command $command = null, stdClass $result = null) : Pixeler\Image
+	protected function _drawImage(Commando\Command $command, stdClass $result) : Pixeler\Image
 	{
 		$image = Pixeler\Pixeler::image($result->thumb, $command['r'], $command['i'], $command['w'], $command['d']);
 		if ($command['g'])
@@ -193,7 +193,7 @@ class Core
 	 * @return array
 	 */
 
-	protected function _getMetadataArray(stdClass $result = null) : array
+	protected function _getMetadataArray(stdClass $result) : array
 	{
 		return array_filter(
 		[
@@ -216,7 +216,7 @@ class Core
 	 * @return string
 	 */
 
-	protected function _openBrowser(stdClass $result = null) : string
+	protected function _openBrowser(stdClass $result) : string
 	{
 		if (PHP_OS === 'Linux')
 		{
