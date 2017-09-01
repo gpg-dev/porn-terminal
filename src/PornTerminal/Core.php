@@ -98,10 +98,6 @@ class Core
 	{
 		$content = $this->_fetchContent($command);
 		$result = json_decode($content);
-		if (!$result)
-		{
-			$command->error(new Exception($this->_wording->get('no_result')));
-		}
 
 		/* map result */
 
@@ -117,11 +113,11 @@ class Core
 		{
 			$result = $result->video;
 		}
-
-		/* random result */
-
-		$total = count($result);
-		$result = $result{mt_rand(0, $total - 1)};
+		if (!is_array($result))
+		{
+			$command->error(new Exception($this->_wording->get('no_result')));
+		}
+		$result = $result{array_rand($result)};
 
 		/* map result */
 

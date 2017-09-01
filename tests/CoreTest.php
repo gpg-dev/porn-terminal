@@ -37,7 +37,7 @@ class CoreTest extends TestCaseAbstract
 		$command
 			->init()
 			->option('t')
-			->default(10);
+			->default(20);
 
 		/* actual */
 

@@ -4,10 +4,10 @@
 		"url": "https://api.porn.com",
 		"endpoint":
 		{
-			"actors": "/actors/find.json",
-			"channels": "/channels/find.json",
-			"dvds": "/dvds/find.json",
-			"videos": "/videos/find.json"
+			"actors": "/actors/find.json?1=1",
+			"channels": "/channels/find.json?1=1",
+			"dvds": "/dvds/find.json?1=1",
+			"videos": "/videos/find.json?1=1"
 		},
 		"query": ""
 	},

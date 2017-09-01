@@ -76,7 +76,7 @@ class Command extends Commando\Command
 			->option('t')
 			->aka('api-timeout')
 			->describe($this->_wording->get('api_timeout') . $this->_wording->get('point'))
-			->default(5)
+			->default(2)
 			->option('r')
 			->aka('image-resize')
 			->describe($this->_wording->get('image_resize') . $this->_wording->get('point'))
