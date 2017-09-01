@@ -1,0 +1,59 @@
+{
+	"porn.com":
+	{
+		"url": "https://api.porn.com",
+		"endpoint":
+		{
+			"actors": "/actors/find.json",
+			"channels": "/channels/find.json",
+			"dvds": "/dvds/find.json",
+			"videos": "/videos/find.json"
+		},
+		"query": ""
+	},
+	"pornhub.com":
+	{
+		"url": "https://pornhub.com",
+		"endpoint":
+		{
+			"videos": "/webmasters/search?1=1"
+		},
+		"query": ""
+	},
+	"redtube.com":
+	{
+		"url": "https://api.redtube.com",
+		"endpoint":
+		{
+			"videos": "?data=redtube.Videos.searchVideos&output=json"
+		},
+		"query": ""
+	},
+	"spankwire.com":
+	{
+		"url": "https://spankwire.com/api",
+		"endpoint":
+		{
+			"videos": "/HubTrafficApiCall?data=searchVideos&output=json"
+		},
+		"query": "segment=straight"
+	},
+	"tube8.com":
+	{
+		"url": "https://api.tube8.com/api.php",
+		"endpoint":
+		{
+			"videos": "?action=searchVideos&output=json"
+		},
+		"query": "search=straight&orientation=straight"
+	},
+	"youporn.com":
+	{
+		"url": "https://www.youporn.com/api",
+		"endpoint":
+		{
+			"videos": "/webmasters/search?1=1"
+		},
+		"query": ""
+	}
+}

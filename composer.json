@@ -1,12 +1,61 @@
 {
 	"name": "redaxmedia/porn-terminal",
 	"description": "Show random porn in your terminal",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"license": "GPL-3.0",
 	"require":
 	{
 		"lastguest/pixeler": "1.1.2",
 		"nategood/commando": "0.2.9",
-		"php": ">5.4"
+		"php": ">7.0"
+	},
+	"require-dev":
+	{
+		"drupal/coder": "8.2.12",
+		"johnkary/phpunit-speedtrap": "2.0.0-BETA1",
+		"phpunit/phpunit": "6.1.4",
+		"phpstan/phpstan": "0.7.0",
+		"sebastian/phpcpd": "3.0.0",
+		"slowprog/composer-copy-file": "0.2.0",
+		"squizlabs/php_codesniffer": "2.9.1"
+	},
+	"autoload":
+	{
+		"psr-0":
+		{
+			"PornTerminal": "src"
+		}
+	},
+	"bin":
+	[
+		"bin/porn-terminal"
+	],
+	"scripts":
+	{
+		"post-install-cmd":
+		[
+			"SlowProg\\CopyFile\\ScriptHandler::copy"
+		],
+		"post-update-cmd":
+		[
+			"@post-install-cmd"
+		],
+		"test":
+		[
+			"vendor/bin/phpunit"
+		],
+		"lint":
+		[
+			"vendor/bin/phpcs src tests",
+			"vendor/bin/phpcpd src tests",
+			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=7 --no-progress src"
+		]
+	},
+	"extra":
+	{
+		"copy-file":
+		{
+			"vendor/drupal/coder/coder_sniffer/Drupal": "vendor/squizlabs/php_codesniffer/CodeSniffer/Standards/Drupal"
+		}
 	}
 }
