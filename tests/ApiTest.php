@@ -30,11 +30,33 @@ class ApiTest extends TestCaseAbstract
 
 		/* actual */
 
-		$actual = $api->getProviderArray();
+		$actualArray = $api->getProviderArray();
 
 		/* compare */
 
-		$this->assertArrayHasKey('porn.com', $actual);
+		$this->assertArrayHasKey('porn.com', $actualArray);
+	}
+
+	/**
+	 * testGetProviderList
+	 *
+	 * @since 2.0.0
+	 */
+
+	public function testGetProviderList()
+	{
+		/* setup */
+
+		$api = new Api();
+		$api->init();
+
+		/* actual */
+
+		$actual = $api->getProviderList();
+
+		/* compare */
+
+		$this->assertString($actual);
 	}
 
 	/**
@@ -52,10 +74,32 @@ class ApiTest extends TestCaseAbstract
 
 		/* actual */
 
-		$actual = $api->getEndpointArray();
+		$actualArray = $api->getEndpointArray();
 
 		/* compare */
 
-		$this->assertArrayHasKey('videos', $actual);
+		$this->assertArrayHasKey('videos', $actualArray);
+	}
+
+	/**
+	 * testGetEndpointList
+	 *
+	 * @since 2.0.0
+	 */
+
+	public function testGetEndpointList()
+	{
+		/* setup */
+
+		$api = new Api();
+		$api->init();
+
+		/* actual */
+
+		$actual = $api->getEndpointList();
+
+		/* compare */
+
+		$this->assertString($actual);
 	}
 }
