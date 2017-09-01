@@ -34,7 +34,10 @@ class CoreTest extends TestCaseAbstract
 		$wording->init();
 		$core = new Core($api, $wording);
 		$command = new Command($api, $wording);
-		$command->init();
+		$command
+			->init()
+			->option('t')
+			->default(10);
 
 		/* actual */
 
