@@ -3,8 +3,6 @@
 
 namespace PornTerminal;
 
-use Commando;
-
 /* bootstrap */
 
 include('src'  . DIRECTORY_SEPARATOR . 'PornTerminal' . DIRECTORY_SEPARATOR . 'bootstrap.php');
@@ -21,53 +19,8 @@ $wording->init();
 
 /* command */
 
-$command = new Commando\Command();
-$command
-	->option('p')
-	->aka('api-provider')
-	->describe($wording->get('api_provider') . $wording->get('colon') . ' ' . $api->getProviderList())
-	->default($api->getProviderDefault())
-	->must($api->hasProvider())
-	->required()
-	->option('e')
-	->aka('api-endpoint')
-	->describe($wording->get('api_endpoint') . $wording->get('colon') . ' ' . $api->getEndpointList())
-	->default($api->getEndpointDefault())
-	->must($api->hasEndpoint($command))
-	->required()
-	->option('q')
-	->aka('api-query')
-	->describe($wording->get('api_query') . $wording->get('point'))
-	->option('r')
-	->aka('image-resize')
-	->describe($wording->get('image_resize') . $wording->get('point'))
-	->default(0.5)
-	->option('i')
-	->aka('image-invert')
-	->describe($wording->get('image_invert') . $wording->get('point'))
-	->boolean()
-	->option('w')
-	->aka('image-weight')
-	->describe($wording->get('image_weight') . $wording->get('point'))
-	->default(1)
-	->option('d')
-	->aka('image-dither')
-	->describe($wording->get('image_dither') . $wording->get('point'))
-	->default(1)
-	->boolean()
-	->option('g')
-	->aka('image-grayscale')
-	->describe($wording->get('image_grayscale') . $wording->get('point'))
-	->boolean()
-	->option('m')
-	->default(1)
-	->aka('image-metadata')
-	->describe($wording->get('image_metadata') . $wording->get('point'))
-	->boolean()
-	->option('o')
-	->aka('open-browser')
-	->describe($wording->get('open_browser') . $wording->get('point'))
-	->boolean();
+$command = new Command($api, $wording);
+$command->init();
 
 /* core */
 

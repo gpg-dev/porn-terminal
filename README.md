@@ -63,6 +63,10 @@ bin/porn-terminal [options]
      API query.
 
 
+-t/--api-timeout <argument>
+     API timeout.
+
+
 -d/--image-dither
      Dither of the image.
 

@@ -2,6 +2,7 @@
 	"api_provider": "API provider",
 	"api_endpoint": "API endpoint",
 	"api_query": "API query",
+	"api_timeout": "API timeout",
 	"image_resize": "Resize the image",
 	"image_invert": "Invert the image",
 	"image_weight": "Weight of the image",

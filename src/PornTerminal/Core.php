@@ -153,7 +153,7 @@ class Core
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_URL => $this->_buildUrl($command),
-			CURLOPT_TIMEOUT => 5,
+			CURLOPT_TIMEOUT => $command['t'],
 			CURLOPT_HTTPHEADER =>
 			[
 				'User-Agent: PornTerminal'
