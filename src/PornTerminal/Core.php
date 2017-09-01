@@ -96,8 +96,7 @@ class Core
 
 	protected function _getResult(Commando\Command $command) : stdClass
 	{
-		$url = $this->_buildUrl($command);
-		$content = file_get_contents($url);
+		$content = $this->_fetchContent($command);
 		$result = json_decode($content);
 		if (!$result)
 		{
@@ -119,10 +118,10 @@ class Core
 			$result = $result->video;
 		}
 
-		/* randomize result */
+		/* random result */
 
 		$total = count($result);
-		$result = $result{mt_rand(0, $total)};
+		$result = $result{mt_rand(0, $total - 1)};
 
 		/* map result */
 
@@ -138,6 +137,40 @@ class Core
 	}
 
 	/**
+	 * fetch the content
+	 *
+	 * @since 2.0.0
+	 *
+	 * @param Commando\Command $command
+	 *
+	 * @return string
+	 */
+
+	protected function _fetchContent(Commando\Command $command) : string
+	{
+		$optionArray =
+		[
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_URL => $this->_buildUrl($command),
+			CURLOPT_TIMEOUT => 5,
+			CURLOPT_HTTPHEADER =>
+			[
+				'User-Agent: PornTerminal'
+			]
+		];
+		$curl = curl_init();
+		curl_setopt_array($curl, $optionArray);
+		$content = curl_exec($curl);
+		if(curl_errno($curl))
+		{
+			$command->error(new Exception(curl_error($curl)));
+		}
+		curl_close($curl);
+		return $content;
+	}
+
+	/**
 	 * build the url
 	 *
 	 * @since 2.0.0
@@ -149,6 +182,7 @@ class Core
 
 	public function _buildUrl(Commando\Command $command) : string
 	{
+		$url = null;
 		$providerKey = $command['p'];
 		$endpointKey = $command['e'];
 		$providerArray = $this->_api->getProviderArray();
@@ -159,7 +193,12 @@ class Core
 		{
 			$command->error(new Exception($this->_wording->get('no_endpoint')));
 		}
-		return $providerValue['url'] . $endpointValue . '&' . $queryValue;
+		$url = $providerValue['url'] . $endpointValue;
+		if ($queryValue)
+		{
+			$url .= '&' . $queryValue;
+		}
+		return $url;
 	}
 
 	/**

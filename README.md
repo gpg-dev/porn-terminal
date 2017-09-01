@@ -10,7 +10,29 @@ Porn Terminal
 [![License](https://img.shields.io/packagist/l/redaxmedia/porn-terminal.svg)](https://packagist.org/packages/redaxmedia/porn-terminal)
 [![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/redaxmedia/porn-terminal)
 
-![Porn Terminal](https://i.imgur.com/tLgfkDQ.png)
+
+Preview
+-------
+
+```
+⣿⡿⣿⢿⣻⣟⠿⣽⣛⡿⣟⠻⠿⡿⡿⢿⡿⢿⢿⣻⢿⡻⣟⣟⡻⣏⢿⣹⣛⢯⢻⣙⣏⣻⣽⣻⣿⣿⣿⣿⢿⡟⣟⣻⣛
+⣿⣟⣋⣟⣮⡱⣞⣯⡵⢶⡭⢞⠷⣽⢿⣯⢿⣽⣶⡽⣾⣵⣫⡶⣝⣮⣧⣗⣮⢯⡷⣯⣾⣷⣿⣯⣿⣿⣿⣯⢳⡝⣮⢳⣭
+⣿⣿⣻⢿⣾⣽⣯⣷⢛⡭⣚⡭⢿⣹⣯⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣜⣧⢻⡜⡷⣞
+⣿⣾⣝⣿⣶⣿⣿⢃⡝⣲⣝⡾⣭⣿⣿⢿⡿⣏⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⢟⣽⣿⢟⣿⣳⢮⣯⢟⣽⣻
+⣿⣷⣿⣿⣿⣿⣿⢆⣼⣷⣿⣽⣳⣷⣏⢾⣱⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣾⡽⣏⠾⣜⢯⡷⣯⣟⣿⣻
+⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣳⣯⡷⣟⠾⣭⢿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣱⢏⡷⣎⢯⣽⢳⣟⡾⣽
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣽⢿⣜⢯⣟⣿⣿⣿⣿⣣⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⢣⡟⣾⡹⣞⡼⣛⣮⣟⡷
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⢳⣏⢾⣹⢾⡿⣿⣻⡟⣻⢟⣻⠝⣿⣿⣿⣿⣿⣿⣿⣿⡻⣜⢧⣛⡼⢣⡟⣾⡝⣿⡼⣾⣽
+⣿⣿⣿⣿⣿⠟⠛⡩⠦⣿⡽⣿⣯⣿⣿⣿⣿⣷⣯⣷⡱⡞⣥⢟⣴⡿⣿⣿⣿⣿⣿⢷⡹⣎⡷⣺⡜⣧⣛⢶⣛⣷⣻⢷⣻
+⣿⣿⣿⣿⡯⢀⠣⡐⣡⠒⣭⢛⡿⣿⣿⣿⣿⣿⣿⣷⢳⣽⣣⣿⣿⣿⣶⣯⣿⣿⣿⢧⡛⡼⣙⢧⡟⣶⣹⢮⡷⣾⣽⣻⣿
+⣿⣿⣿⣿⡟⡄⣣⣘⣆⣻⣬⡟⣾⣽⣿⣿⣿⣿⣿⣗⣣⣞⣿⣿⣿⣿⣿⣿⣿⡿⣝⡲⡽⣖⡭⢶⣙⢧⡻⢯⣟⣷⣯⣿⣿
+⣿⣿⣿⣿⣷⣿⢳⣟⡾⣽⣞⣿⣿⣿⣿⣿⣿⣿⣿⣧⣛⡾⣿⣿⣿⣿⣿⣿⣿⡹⣖⠿⠼⠽⡻⢧⠟⡮⢟⡯⠿⢾⠿⢿⠿
+⠿⠿⠿⠿⠿⠿⠧⠏⠿⠾⠽⠯⠿⠞⠷⠿⠿⠿⠿⠧⠏⠿⠿⠿⠿⠿⠿⠿⠿⠳⠽⠏⠶⠛⠜⠳⠛⠖⠻⠖⠟⠳⠾⠫⠷
+Title: How to give a handjob lesson hot blonde
+URL: https://www.redtube.com/2416339
+Rating: 5.00
+Duration: 8:00
+```
 
 
 Installation
@@ -30,11 +52,11 @@ Usage
 bin/porn-terminal [options]
 
 -e/--api-endpoint <argument>
-     Required. API endpoint. (actors, channels, dvds, videos)
+     Required. API endpoint: actors, channels, dvds, videos
 
 
 -p/--api-provider <argument>
-     Required. API provider. (porn.com, pornhub.com, redtube.com, spankwire.com, youporn.com)
+     Required. API provider: porn.com, pornhub.com, redtube.com, spankwire.com, tube8.com, youporn.com
 
 
 -q/--api-query <argument>

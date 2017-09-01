@@ -1,6 +1,8 @@
 <?php
 namespace PornTerminal\Tests;
 
+use PornTerminal\Api;
+
 /**
  * ApiTest
  *
@@ -14,13 +16,46 @@ namespace PornTerminal\Tests;
 class ApiTest extends TestCaseAbstract
 {
 	/**
-	 * testDummy
+	 * testGetProviderArray
 	 *
 	 * @since 2.0.0
 	 */
 
-	public function testDummy()
+	public function testGetProviderArray()
 	{
-		$this->assertEquals(1, 1);
+		/* setup */
+
+		$api = new Api();
+		$api->init();
+
+		/* actual */
+
+		$actual = $api->getProviderArray();
+
+		/* compare */
+
+		$this->assertArrayHasKey('porn.com', $actual);
+	}
+
+	/**
+	 * testGetEndpointArray
+	 *
+	 * @since 2.0.0
+	 */
+
+	public function testGetEndpointArray()
+	{
+		/* setup */
+
+		$api = new Api();
+		$api->init();
+
+		/* actual */
+
+		$actual = $api->getEndpointArray();
+
+		/* compare */
+
+		$this->assertArrayHasKey('videos', $actual);
 	}
 }

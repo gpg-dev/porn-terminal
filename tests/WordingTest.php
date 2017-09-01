@@ -16,24 +16,25 @@ use PornTerminal\Wording;
 class WordingTest extends TestCaseAbstract
 {
 	/**
-	 * testDummy
+	 * testGet
 	 *
 	 * @since 2.0.0
 	 */
 
-	public function testDummy()
+	public function testGet()
 	{
 		/* setup */
 
 		$wording = new Wording();
 		$wording->init();
 
-		/* actual */
+		/* expect and actual */
 
-		$actual = $wording->get('colon');
+		$expect = '.';
+		$actual = $wording->get('point');
 
 		/* compare */
 
-		$this->assertString($actual);
+		$this->assertEquals($expect, $actual);
 	}
 }
