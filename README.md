@@ -103,12 +103,6 @@ bin/porn-terminal [options]
 Examples
 --------
 
-Show videos with big tits:
-
-```
-bin/porn-terminal -q tags=big-tits
-```
-
 Show actors by rating:
 
 ```
