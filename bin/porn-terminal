@@ -1,28 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-namespace PornTerminal;
-
 /* bootstrap */
 
 include('src'  . DIRECTORY_SEPARATOR . 'PornTerminal' . DIRECTORY_SEPARATOR . 'bootstrap.php');
-
-/* api */
-
-$api = new Api();
-$api->init();
-
-/* wording */
-
-$wording = new Wording();
-$wording->init();
-
-/* command */
-
-$command = new Command($api, $wording);
-$command->init();
-
-/* core */
-
-$core = new Core($api, $wording);
-echo $core->run($command);
