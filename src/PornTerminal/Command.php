@@ -9,7 +9,7 @@ use Commando;
  * @since 2.0.0
  *
  * @package PornTerminal
- * @category Wording
+ * @category Command
  * @author Henry Ruhs
  */
 
