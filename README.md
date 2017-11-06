@@ -51,52 +51,53 @@ Usage
 ```
 bin/porn-terminal [options]
 
--e/--api-endpoint <argument>
-     Required. API endpoint: actors, channels, dvds, videos
 
-
--p/--api-provider <argument>
-     Required. API provider: porn.com, pornhub.com, redtube.com, spankwire.com, tube8.com, youporn.com
-
-
--q/--api-query <argument>
-     API query.
-
-
--t/--api-timeout <argument>
-     API timeout.
-
-
--d/--image-dither
+-D/--image-dither
      Dither of the image.
 
 
--g/--image-grayscale
+-E/--api-endpoint <argument>
+     Required. API endpoint: actors, channels, dvds, videos
+
+
+-G/--image-grayscale
      Grayscale of the image.
+
+
+-I/--image-invert
+     Invert the image.
+
+
+-M/--image-metadata
+     Metadata of the image.
+
+
+-O/--open-browser
+     Open URL in browser.
+
+
+-P/--api-provider <argument>
+     Required. API provider: porn.com, pornhub.com, redtube.com, spankwire.com, tube8.com, youporn.com
+
+
+-Q/--api-query <argument>
+     API query.
+
+
+-R/--image-resize <argument>
+     Resize the image.
+
+
+-T/--api-timeout <argument>
+     API timeout.
+
+
+-W/--image-weight <argument>
+     Weight of the image.
 
 
 --help
      Show the help page for this command.
-
-
--i/--image-invert
-     Invert the image.
-
-
--m/--image-metadata
-     Metadata of the image.
-
-
--r/--image-resize <argument>
-     Resize the image.
-
-
--w/--image-weight <argument>
-     Weight of the image.
-
-
--o/--open-browser
-     Open URL in browser.
 ```
 
 
@@ -106,23 +107,23 @@ Examples
 Show actors by rating:
 
 ```
-bin/porn-terminal -p porn.com -e actors -q order=rating
+bin/porn-terminal --api-provider porn.com --api-endpoint actors --api-query order=rating
 ```
 
 Show dvds by views:
 
 ```
-bin/porn-terminal -p porn.com -e dvds -q order=views
+bin/porn-terminal --api-provider porn.com --api-endpoint dvds --api-query order=views
 ```
 
 Show videos from pornhub.com:
 
 ```
-bin/porn-terminal -p pornhub.com
+bin/porn-terminal --api-provider pornhub.com
 ```
 
 Show videos from youporn.com:
 
 ```
-bin/porn-terminal -p youporn.com
+bin/porn-terminal --api-provider youporn.com
 ```

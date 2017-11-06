@@ -66,7 +66,7 @@ class Core
 		/* collect output */
 
 		$output = (string)$this->_drawImage($command, $result);
-		if ($command['m'])
+		if ($command['image-metadata'])
 		{
 			$metaArray = $this->_getMetadataArray($result);
 			if ($metaArray)
@@ -77,7 +77,7 @@ class Core
 
 		/* open browser */
 
-		if ($command['o'])
+		if ($command['open-browser'])
 		{
 			$this->_openBrowser($result);
 		}
@@ -149,7 +149,7 @@ class Core
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_URL => $this->_buildUrl($command),
-			CURLOPT_TIMEOUT => $command['t'],
+			CURLOPT_TIMEOUT => $command['api-timeout'],
 			CURLOPT_HTTPHEADER =>
 			[
 				'User-Agent: PornTerminal'
@@ -179,12 +179,12 @@ class Core
 	public function _buildUrl(Commando\Command $command) : string
 	{
 		$url = null;
-		$providerKey = $command['p'];
-		$endpointKey = $command['e'];
+		$providerKey = $command['api-provider'];
+		$endpointKey = $command['api-endpoint'];
 		$providerArray = $this->_api->getProviderArray();
 		$providerValue = $providerArray[$providerKey];
 		$endpointValue = $providerValue['endpoint'][$endpointKey];
-		$queryValue = $command['q'] ? $command['q'] : $providerValue['query'];
+		$queryValue = $command['api-query'] ? $command['api-query'] : $providerValue['query'];
 		if (!$endpointValue)
 		{
 			$command->error(new Exception($this->_wording->get('no_endpoint')));
@@ -210,8 +210,8 @@ class Core
 
 	protected function _drawImage(Commando\Command $command, stdClass $result) : Pixeler\Image
 	{
-		$image = Pixeler\Pixeler::image($result->thumb, $command['r'], $command['i'], $command['w'], $command['d']);
-		if ($command['g'])
+		$image = Pixeler\Pixeler::image($result->thumb, $command['image-resize'], $command['image-invert'], $command['image-weight'], $command['image-dither']);
+		if ($command['image-grayscale'])
 		{
 			$image->clearColors();
 		}

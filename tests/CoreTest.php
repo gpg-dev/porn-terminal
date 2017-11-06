@@ -36,7 +36,7 @@ class CoreTest extends TestCaseAbstract
 		$command = new Command($api, $wording);
 		$command
 			->init()
-			->option('t')
+			->option('api-timeout')
 			->default(20);
 
 		/* actual */
