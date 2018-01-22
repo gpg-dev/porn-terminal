@@ -20,7 +20,7 @@ abstract class TestCaseAbstract extends PHPUnit\Framework\TestCase
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $actual
+	 * @param mixed $actual
 	 */
 
 	public function assertString($actual = null)
