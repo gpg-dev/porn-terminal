@@ -1,6 +1,8 @@
 <?php
 namespace PornTerminal;
 
+use Closure;
+
 /**
  * parent class to provide the api
  *
@@ -98,10 +100,10 @@ class Api
 	 *
 	 * @since 2.0.0
 	 *
-	 * @return callable
+	 * @return Closure
 	 */
 
-	public function hasProvider() : callable
+	public function hasProvider() : Closure
 	{
 		return function ($provider)
 		{
@@ -165,10 +167,10 @@ class Api
 	 *
 	 * @since 2.0.0
 	 *
-	 * @return callable
+	 * @return Closure
 	 */
 
-	public function hasEndpoint() : callable
+	public function hasEndpoint() : Closure
 	{
 		return function ($endpoint)
 		{
