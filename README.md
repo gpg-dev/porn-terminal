@@ -7,7 +7,6 @@ Porn Terminal
 [![Dependency Status](https://gemnasium.com/badges/github.com/redaxmedia/porn-terminal.svg)](https://gemnasium.com/github.com/redaxmedia/porn-terminal)
 [![Latest Stable Version](https://img.shields.io/packagist/v/redaxmedia/porn-terminal.svg)](https://packagist.org/packages/redaxmedia/porn-terminal)
 [![License](https://img.shields.io/packagist/l/redaxmedia/porn-terminal.svg)](https://packagist.org/packages/redaxmedia/porn-terminal)
-[![GitHub Stats](https://img.shields.io/badge/github-stats-ff5500.svg)](http://githubstats.com/redaxmedia/porn-terminal)
 
 
 Preview
