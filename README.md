@@ -4,7 +4,6 @@ Porn Terminal
 > Show random porn in your terminal.
 
 [![Build Status](https://img.shields.io/travis/redaxmedia/porn-terminal.svg)](https://travis-ci.org/redaxmedia/porn-terminal)
-[![Dependency Status](https://dependencyci.com/github/redaxmedia/porn-terminal/badge)](https://dependencyci.com/github/redaxmedia/porn-terminal)
 [![Latest Stable Version](https://img.shields.io/packagist/v/redaxmedia/porn-terminal.svg)](https://packagist.org/packages/redaxmedia/porn-terminal)
 [![License](https://img.shields.io/packagist/l/redaxmedia/porn-terminal.svg)](https://packagist.org/packages/redaxmedia/porn-terminal)
 
