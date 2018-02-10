@@ -11,25 +11,7 @@ Porn Terminal
 Preview
 -------
 
-```
-⣿⡿⣿⢿⣻⣟⠿⣽⣛⡿⣟⠻⠿⡿⡿⢿⡿⢿⢿⣻⢿⡻⣟⣟⡻⣏⢿⣹⣛⢯⢻⣙⣏⣻⣽⣻⣿⣿⣿⣿⢿⡟⣟⣻⣛
-⣿⣟⣋⣟⣮⡱⣞⣯⡵⢶⡭⢞⠷⣽⢿⣯⢿⣽⣶⡽⣾⣵⣫⡶⣝⣮⣧⣗⣮⢯⡷⣯⣾⣷⣿⣯⣿⣿⣿⣯⢳⡝⣮⢳⣭
-⣿⣿⣻⢿⣾⣽⣯⣷⢛⡭⣚⡭⢿⣹⣯⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣜⣧⢻⡜⡷⣞
-⣿⣾⣝⣿⣶⣿⣿⢃⡝⣲⣝⡾⣭⣿⣿⢿⡿⣏⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣫⢟⣽⣿⢟⣿⣳⢮⣯⢟⣽⣻
-⣿⣷⣿⣿⣿⣿⣿⢆⣼⣷⣿⣽⣳⣷⣏⢾⣱⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣾⡽⣏⠾⣜⢯⡷⣯⣟⣿⣻
-⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣳⣯⡷⣟⠾⣭⢿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣱⢏⡷⣎⢯⣽⢳⣟⡾⣽
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣽⢿⣜⢯⣟⣿⣿⣿⣿⣣⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⢣⡟⣾⡹⣞⡼⣛⣮⣟⡷
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⢳⣏⢾⣹⢾⡿⣿⣻⡟⣻⢟⣻⠝⣿⣿⣿⣿⣿⣿⣿⣿⡻⣜⢧⣛⡼⢣⡟⣾⡝⣿⡼⣾⣽
-⣿⣿⣿⣿⣿⠟⠛⡩⠦⣿⡽⣿⣯⣿⣿⣿⣿⣷⣯⣷⡱⡞⣥⢟⣴⡿⣿⣿⣿⣿⣿⢷⡹⣎⡷⣺⡜⣧⣛⢶⣛⣷⣻⢷⣻
-⣿⣿⣿⣿⡯⢀⠣⡐⣡⠒⣭⢛⡿⣿⣿⣿⣿⣿⣿⣷⢳⣽⣣⣿⣿⣿⣶⣯⣿⣿⣿⢧⡛⡼⣙⢧⡟⣶⣹⢮⡷⣾⣽⣻⣿
-⣿⣿⣿⣿⡟⡄⣣⣘⣆⣻⣬⡟⣾⣽⣿⣿⣿⣿⣿⣗⣣⣞⣿⣿⣿⣿⣿⣿⣿⡿⣝⡲⡽⣖⡭⢶⣙⢧⡻⢯⣟⣷⣯⣿⣿
-⣿⣿⣿⣿⣷⣿⢳⣟⡾⣽⣞⣿⣿⣿⣿⣿⣿⣿⣿⣧⣛⡾⣿⣿⣿⣿⣿⣿⣿⡹⣖⠿⠼⠽⡻⢧⠟⡮⢟⡯⠿⢾⠿⢿⠿
-⠿⠿⠿⠿⠿⠿⠧⠏⠿⠾⠽⠯⠿⠞⠷⠿⠿⠿⠿⠧⠏⠿⠿⠿⠿⠿⠿⠿⠿⠳⠽⠏⠶⠛⠜⠳⠛⠖⠻⠖⠟⠳⠾⠫⠷
-Title: How to give a handjob lesson hot blonde
-URL: https://www.redtube.com/2416339
-Rating: 5.00
-Duration: 8:00
-```
+![Terminal Session](https://cdn.rawgit.com/redaxmedia/media/master/porn-terminal/terminal-session.svg)
 
 
 Installation
@@ -74,7 +56,7 @@ bin/porn-terminal [options]
 
 
 -P/--api-provider <argument>
-     Required. API provider: porn.com, pornhub.com, redtube.com, spankwire.com, tube8.com, youporn.com
+     Required. API provider: porn.com, pornhub.com, redtube.com, tube8.com, youporn.com
 
 
 -Q/--api-query <argument>

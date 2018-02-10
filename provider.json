@@ -29,15 +29,6 @@
 		},
 		"query": ""
 	},
-	"spankwire.com":
-	{
-		"url": "https://spankwire.com/api",
-		"endpoint":
-		{
-			"videos": "/HubTrafficApiCall?data=searchVideos&output=json"
-		},
-		"query": "segment=straight"
-	},
 	"tube8.com":
 	{
 		"url": "https://api.tube8.com/api.php",
