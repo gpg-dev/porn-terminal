@@ -7,7 +7,7 @@
 	{
 		"lastguest/pixeler": "1.1.2",
 		"nategood/commando": "0.2.9",
-		"php": "^7.0"
+		"php": "^7.1"
 	},
 	"require-dev":
 	{
