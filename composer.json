@@ -31,15 +31,15 @@
 	],
 	"scripts":
 	{
-		"test":
-		[
-			"vendor/bin/phpunit"
-		],
 		"lint":
 		[
 			"vendor/bin/phpcs src tests",
 			"vendor/bin/phpcpd src tests",
 			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=7 --no-progress src"
+		],
+		"test":
+		[
+			"vendor/bin/phpunit"
 		]
 	}
 }
