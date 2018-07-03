@@ -1,7 +1,7 @@
 {
 	"name": "redaxmedia/porn-terminal",
 	"description": "Show random porn in your terminal",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"license": "GPL-3.0-only",
 	"require":
 	{
@@ -12,11 +12,11 @@
 	"require-dev":
 	{
 		"johnkary/phpunit-speedtrap": "3.0.0",
-		"phpunit/phpunit": "7.0.2",
-		"redaxmedia/php-coding-standard": "1.0.0",
-		"phpstan/phpstan": "0.9.2",
+		"phpunit/phpunit": "7.2.6",
+		"redaxmedia/php-coding-standard": "1.1.1",
+		"phpstan/phpstan": "0.10.1",
 		"sebastian/phpcpd": "4.0.0",
-		"squizlabs/php_codesniffer": "3.2.3"
+		"squizlabs/php_codesniffer": "3.3.0"
 	},
 	"autoload":
 	{
@@ -31,15 +31,15 @@
 	],
 	"scripts":
 	{
+		"test":
+		[
+			"vendor/bin/phpunit"
+		],
 		"lint":
 		[
 			"vendor/bin/phpcs src tests",
 			"vendor/bin/phpcpd src tests",
-			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=7 --no-progress src"
-		],
-		"test":
-		[
-			"vendor/bin/phpunit"
+			"vendor/bin/phpstan analyse --configuration=phpstan.neon --level=5 --no-progress src"
 		]
 	}
 }
