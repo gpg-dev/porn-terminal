@@ -18,9 +18,7 @@ Installation
 ------------
 
 ```
-git clone https://github.com/redaxmedia/porn-terminal.git
-cd porn-terminal
-composer install
+composer require redaxmedia/porn-terminal
 ```
 
 
