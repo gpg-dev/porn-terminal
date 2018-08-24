@@ -1,22 +1,22 @@
 {
 	"name": "redaxmedia/porn-terminal",
 	"description": "Show random porn in your terminal",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"license": "GPL-3.0-only",
 	"require":
 	{
 		"lastguest/pixeler": "1.1.2",
-		"nategood/commando": "0.2.9",
+		"nategood/commando": "0.3.0",
 		"php": "^7.1"
 	},
 	"require-dev":
 	{
 		"johnkary/phpunit-speedtrap": "3.0.0",
-		"phpunit/phpunit": "7.2.6",
+		"phpunit/phpunit": "7.3.2",
 		"redaxmedia/php-coding-standard": "1.1.1",
-		"phpstan/phpstan": "0.10.1",
+		"phpstan/phpstan": "0.10.3",
 		"sebastian/phpcpd": "4.0.0",
-		"squizlabs/php_codesniffer": "3.3.0"
+		"squizlabs/php_codesniffer": "3.3.1"
 	},
 	"autoload":
 	{

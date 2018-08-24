@@ -17,8 +17,16 @@ Preview
 Installation
 ------------
 
+Clone the repository:
+
 ```
-composer require redaxmedia/porn-terminal
+git clone https://github.com/redaxmedia/porn-terminal.git
+```
+
+Install the dependencies:
+
+```
+composer install
 ```
 
 
