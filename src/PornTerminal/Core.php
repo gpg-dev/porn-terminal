@@ -56,6 +56,8 @@ class Core
 	 *
 	 * @param Commando\Command $command
 	 *
+	 * @throws Exception
+	 *
 	 * @return string
 	 */
 
@@ -90,6 +92,8 @@ class Core
 	 * @since 2.0.0
 	 *
 	 * @param Commando\Command $command
+	 *
+	 * @throws Exception
 	 *
 	 * @return stdClass
 	 */
@@ -139,6 +143,8 @@ class Core
 	 *
 	 * @param Commando\Command $command
 	 *
+	 * @throws Exception
+	 *
 	 * @return string
 	 */
 
@@ -172,6 +178,8 @@ class Core
 	 * @since 2.0.0
 	 *
 	 * @param Commando\Command $command
+	 *
+	 * @throws Exception
 	 *
 	 * @return string
 	 */

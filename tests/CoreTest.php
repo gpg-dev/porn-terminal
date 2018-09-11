@@ -2,8 +2,8 @@
 namespace PornTerminal\Tests;
 
 use PornTerminal\Api;
-use PornTerminal\Core;
 use PornTerminal\Command;
+use PornTerminal\Core;
 use PornTerminal\Wording;
 
 /**
