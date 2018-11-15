@@ -2,6 +2,12 @@
 namespace PornTerminal;
 
 use Closure;
+use function array_keys;
+use function array_rand;
+use function file_get_contents;
+use function implode;
+use function in_array;
+use function json_decode;
 
 /**
  * parent class to provide the api

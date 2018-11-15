@@ -2,6 +2,7 @@
 namespace PornTerminal\Tests;
 
 use PHPUnit;
+use function is_string;
 
 /**
  * TestCaseAbstract

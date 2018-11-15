@@ -1,6 +1,9 @@
 <?php
 namespace PornTerminal;
 
+use function file_get_contents;
+use function json_decode;
+
 /**
  * parent class to provide the wording
  *

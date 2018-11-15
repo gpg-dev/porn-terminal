@@ -1,6 +1,8 @@
 <?php
 namespace PornTerminal;
 
+use function error_reporting;
+
 error_reporting(E_ERROR | E_PARSE);
 
 /* include */
