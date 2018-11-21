@@ -226,7 +226,7 @@ class Core
 	 * @return Pixeler\Image
 	 */
 
-	protected function _drawImage(Commando\Command $command, stdClass $result) : Pixeler\Image
+	protected function _drawImage(Commando\Command $command, stdClass $result = null) : Pixeler\Image
 	{
 		$image = Pixeler\Pixeler::image($this->_normalizeThumb($result->thumb), $command['image-resize'], $command['image-invert'], $command['image-weight'], $command['image-dither']);
 		if ($command['image-grayscale'])
@@ -262,7 +262,7 @@ class Core
 	 * @return array
 	 */
 
-	protected function _getMetadataArray(stdClass $result) : array
+	protected function _getMetadataArray(stdClass $result = null) : array
 	{
 		return array_filter(
 		[
@@ -285,7 +285,7 @@ class Core
 	 * @return string
 	 */
 
-	protected function _openBrowser(stdClass $result) : string
+	protected function _openBrowser(stdClass $result = null) : string
 	{
 		if (PHP_OS === 'Linux')
 		{
