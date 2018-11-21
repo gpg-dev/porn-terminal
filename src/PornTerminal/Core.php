@@ -288,7 +288,7 @@ class Core
 	{
 		if (PHP_OS === 'Linux')
 		{
-			return exec('xdg-open ' . $result->url);
+			return exec('xdg-open ' . $result->url . ' 2>/dev/null');
 		}
 		return exec('open ' . $result->url);
 	}
