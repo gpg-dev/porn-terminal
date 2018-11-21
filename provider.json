@@ -36,7 +36,16 @@
 		{
 			"videos": "?action=searchVideos&output=json"
 		},
-		"query": "search=straight&orientation=straight"
+		"query": "orientation=straight"
+	},
+	"xtube.com":
+	{
+		"url": "https://www.xtube.com/webmaster/api",
+		"endpoint":
+		{
+			"videos": "/getvideosbysearchparams?1=1"
+		},
+		"query": "orientation=straight&count=100"
 	},
 	"youporn.com":
 	{

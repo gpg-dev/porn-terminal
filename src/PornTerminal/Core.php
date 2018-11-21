@@ -17,6 +17,7 @@ use function exec;
 use function implode;
 use function is_array;
 use function json_decode;
+use function parse_url;
 
 /**
  * parent class for the core
@@ -167,11 +168,7 @@ class Core
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_URL => $this->_buildUrl($command),
-			CURLOPT_TIMEOUT => $command['api-timeout'],
-			CURLOPT_HTTPHEADER =>
-			[
-				'User-Agent: PornTerminal'
-			]
+			CURLOPT_TIMEOUT => $command['api-timeout']
 		];
 		$curl = curl_init();
 		curl_setopt_array($curl, $optionArray);
@@ -230,12 +227,28 @@ class Core
 
 	protected function _drawImage(Commando\Command $command, stdClass $result) : Pixeler\Image
 	{
-		$image = Pixeler\Pixeler::image($result->thumb, $command['image-resize'], $command['image-invert'], $command['image-weight'], $command['image-dither']);
+		$image = Pixeler\Pixeler::image($this->_normalizeThumb($result->thumb), $command['image-resize'], $command['image-invert'], $command['image-weight'], $command['image-dither']);
 		if ($command['image-grayscale'])
 		{
 			$image->clearColors();
 		}
 		return $image;
+	}
+
+	/**
+	 * normalize the thumb
+	 *
+	 * @since 2.2.0
+	 *
+	 * @param string $thumb
+	 *
+	 * @return string
+	 */
+
+	protected function _normalizeThumb(string $thumb = null) : string
+	{
+		$urlArray = parse_url($thumb);
+		return $urlArray['scheme'] . '://' . $urlArray['host'] . $urlArray['path'];
 	}
 
 	/**
@@ -277,9 +290,6 @@ class Core
 		{
 			return exec('xdg-open ' . $result->url);
 		}
-		else
-		{
-			return exec('open ' . $result->url);
-		}
+		return exec('open ' . $result->url);
 	}
 }

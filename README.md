@@ -62,7 +62,7 @@ bin/porn-terminal [options]
 
 
 -P/--api-provider <argument>
-     Required. API provider: porn.com, pornhub.com, redtube.com, tube8.com, youporn.com
+     Required. API provider: porn.com, pornhub.com, redtube.com, tube8.com, xtube.com, youporn.com
 
 
 -Q/--api-query <argument>
