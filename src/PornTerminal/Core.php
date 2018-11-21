@@ -134,7 +134,8 @@ class Core
 		{
 			$command->error(new Exception($this->_wording->get('no_result')));
 		}
-		$result = $result{array_rand($result)};
+		$key = array_rand($result);
+		$result = $result[$key];
 
 		/* map result */
 
