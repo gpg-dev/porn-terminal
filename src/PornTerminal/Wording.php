@@ -32,7 +32,7 @@ class Wording
 
 	public function init()
 	{
-		$content = file_get_contents('wording.json');
+		$content = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'wording.json');
 		$this->_wordingArray = json_decode($content, true);
 	}
 

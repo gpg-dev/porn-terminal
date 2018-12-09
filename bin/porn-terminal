@@ -5,7 +5,7 @@ namespace PornTerminal;
 
 /* bootstrap */
 
-include('src'  . DIRECTORY_SEPARATOR . 'PornTerminal' . DIRECTORY_SEPARATOR . 'bootstrap.php');
+include(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'src'  . DIRECTORY_SEPARATOR . 'PornTerminal' . DIRECTORY_SEPARATOR . 'bootstrap.php');
 
 /* api */
 

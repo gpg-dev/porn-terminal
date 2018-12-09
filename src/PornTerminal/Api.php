@@ -45,7 +45,7 @@ class Api
 
 	public function init()
 	{
-		$content = file_get_contents('provider.json');
+		$content = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'provider.json');
 		$this->_providerArray = json_decode($content, true);
 	}
 
