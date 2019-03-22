@@ -21,7 +21,7 @@ class WordingTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testGet()
+	public function testGet() : void
 	{
 		/* setup */
 

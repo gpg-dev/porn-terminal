@@ -24,7 +24,7 @@ class CoreTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testRun()
+	public function testRun() : void
 	{
 		/* setup */
 
@@ -45,6 +45,6 @@ class CoreTest extends TestCaseAbstract
 
 		/* compare */
 
-		$this->assertString($actual);
+		$this->assertIsString($actual);
 	}
 }

@@ -21,7 +21,7 @@ class ApiTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testGetProviderArray()
+	public function testGetProviderArray() : void
 	{
 		/* setup */
 
@@ -43,7 +43,7 @@ class ApiTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testGetProviderList()
+	public function testGetProviderList() : void
 	{
 		/* setup */
 
@@ -56,7 +56,7 @@ class ApiTest extends TestCaseAbstract
 
 		/* compare */
 
-		$this->assertString($actual);
+		$this->assertIsString($actual);
 	}
 
 	/**
@@ -65,7 +65,7 @@ class ApiTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testGetEndpointArray()
+	public function testGetEndpointArray() : void
 	{
 		/* setup */
 
@@ -87,7 +87,7 @@ class ApiTest extends TestCaseAbstract
 	 * @since 2.0.0
 	 */
 
-	public function testGetEndpointList()
+	public function testGetEndpointList() : void
 	{
 		/* setup */
 
@@ -100,6 +100,6 @@ class ApiTest extends TestCaseAbstract
 
 		/* compare */
 
-		$this->assertString($actual);
+		$this->assertIsString($actual);
 	}
 }
