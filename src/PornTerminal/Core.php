@@ -202,7 +202,7 @@ class Core
 		$providerArray = $this->_api->getProviderArray();
 		$providerValue = $providerArray[$providerKey];
 		$endpointValue = $providerValue['endpoint'][$endpointKey];
-		$queryValue = $command['api-query'] ? $command['api-query'] : $providerValue['query'];
+		$queryValue = $command['api-query'] ? : $providerValue['query'];
 		if (!$endpointValue)
 		{
 			$command->error(new Exception($this->_wording->get('no_endpoint')));
