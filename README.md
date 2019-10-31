@@ -33,6 +33,8 @@ composer install
 Usage
 -----
 
+Run the command:
+
 ```
 bin/porn-terminal [options]
 
